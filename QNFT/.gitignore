@@ -1,0 +1,15 @@
+# QNFT/.gitignore
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+*.egg-info/
+dist/
+build/
+*.sqlite3
+*.db
+uploads/ # If uploads are stored locally and not part of the repo
+.DS_Store

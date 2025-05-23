@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}QNFT Price Chart{% endblock %}
+
+{% block content %}
+<div class="section">
+    <h2>SOL/USDC Price Chart</h2>
+    <!-- TODO: Add toggle or separate chart for BTC/USDC price data -->
+    <div class="chart-controls">
+        <label for="timeRange">Select Time Range:</label>
+        <select id="timeRange">
+            <option value="24" selected>Last 24 Hours</option> <!-- Default -->
+            <option value="72">Last 72 Hours</option>
+            <option value="168">Last 7 Days</option>
+            <option value="720">Last 30 Days</option>
+        </select>
+    </div>
+    <div id="chartStatus">Loading chart data...</div>
+    <div class="chart-container" style="position: relative; height:60vh; width:80vw">
+        <canvas id="priceChartCanvas"></canvas>
+    </div>
+</div>
+{% endblock %}
