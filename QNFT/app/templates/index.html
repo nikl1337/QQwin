@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Upload & Mint QNFT{% endblock %}
+
+{% block content %}
+<div class="section">
+    <h2>1. Upload Your Image</h2>
+    <form id="uploadForm">
+        <input type="file" id="imageUpload" name="file" accept="image/png, image/jpeg, image/jpg">
+        <button type="submit">Upload & Generate GIF</button>
+    </form>
+    <div id="uploadStatus"></div>
+    <div id="gifGenerationStatus"></div>
+</div>
+
+<div class="section" id="gifMintSection" style="display:none;">
+    <h2>2. Review Your GIF & Mint</h2>
+    <img id="generatedGif" src="" alt="Generated QNFT GIF" style="max-width: 400px; display: none;">
+    
+    <div id="priceInfo" style="margin-top:10px;">
+        <p><strong>Current Prices:</strong></p>
+        <p id="btcPrice">BTC/USDC: Loading...</p>
+        <p id="solPrice">SOL/USDC: Loading...</p>
+        <p id="timestamp">Timestamp: Loading...</p>
+    </div>
+
+    <div id="mintControls" style="margin-top:10px;">
+        <h3>Select Mint Type:</h3>
+        <input type="radio" id="mintTypeLong" name="mintType" value="long" checked>
+        <label for="mintTypeLong">Long (predicting price increase)</label><br>
+        <input type="radio" id="mintTypeShort" name="mintType" value="short">
+        <label for="mintTypeShort">Short (predicting price decrease)</label><br>
+        
+        <label for="userDescription" style="margin-top:10px; display:block;">Description (Optional):</label>
+        <textarea id="userDescription" name="userDescription" rows="3" style="width:100%;"></textarea><br>
+        
+        <button id="mintNftButton" style="margin-top:10px;">Mint NFT</button>
+    </div>
+    <div id="mintingStatus"></div>
+</div>
+{% endblock %}

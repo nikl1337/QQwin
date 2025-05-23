@@ -1,0 +1,13 @@
+# QNFT/requirements.txt
+# Add Python dependencies here, e.g.:
+Flask
+Pillow # (for image manipulation)
+requests # (for API calls)
+solana # Solana SDK
+PyNaCl # For Solana keypair generation and signing (often a dependency)
+# metaplex-python (if a suitable Python Metaplex SDK exists, otherwise use JS)
+
+# Testing dependencies
+pytest
+pytest-flask
+responses
